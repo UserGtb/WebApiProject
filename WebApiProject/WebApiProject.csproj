@@ -1,0 +1,37 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Folder Include="Models\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="3.1.32">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="NSwag.AspNetCore" Version="13.18.0" />
+    <PackageReference Include="NSwag.MSBuild" Version="13.18.0">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Data.Access\Data.Access.csproj" />
+    <ProjectReference Include="..\Project.App\Project.App.csproj" />
+    <ProjectReference Include="..\Task.App\Task.App.csproj" />
+  </ItemGroup>
+
+  <Target Name="GeneratNSwag" AfterTargets="Build" Condition="$(SkipSwagger) != 'true'">
+		<Exec EnvironmentVariables="ASPNETCORE_ENVIRONMENT=Development;" Command="$(NSwagExe_Core31) aspnetcore2openapi /project:&quot;$(MSBuildProjectFullPath)&quot; /nobuild:true /output:swagger.json /documentName:v1 /configuration:$(Configuration)" />
+	</Target>
+
+  <ProjectExtensions><VisualStudio><UserProperties properties_4launchsettings_1json__JsonSchema="" /></VisualStudio></ProjectExtensions>
+
+	
+
+</Project>
