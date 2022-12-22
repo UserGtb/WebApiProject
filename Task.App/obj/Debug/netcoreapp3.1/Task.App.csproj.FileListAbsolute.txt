@@ -1,0 +1,10 @@
+D:\TaskProject\WebApiProject\Task.App\bin\Debug\netcoreapp3.1\Task.App.deps.json
+D:\TaskProject\WebApiProject\Task.App\bin\Debug\netcoreapp3.1\Task.App.dll
+D:\TaskProject\WebApiProject\Task.App\bin\Debug\netcoreapp3.1\Task.App.pdb
+D:\TaskProject\WebApiProject\Task.App\obj\Debug\netcoreapp3.1\Task.App.GeneratedMSBuildEditorConfig.editorconfig
+D:\TaskProject\WebApiProject\Task.App\obj\Debug\netcoreapp3.1\Task.App.AssemblyInfoInputs.cache
+D:\TaskProject\WebApiProject\Task.App\obj\Debug\netcoreapp3.1\Task.App.AssemblyInfo.cs
+D:\TaskProject\WebApiProject\Task.App\obj\Debug\netcoreapp3.1\Task.App.csproj.CoreCompileInputs.cache
+D:\TaskProject\WebApiProject\Task.App\obj\Debug\netcoreapp3.1\Task.App.dll
+D:\TaskProject\WebApiProject\Task.App\obj\Debug\netcoreapp3.1\Task.App.pdb
+D:\TaskProject\WebApiProject\Task.App\obj\Debug\netcoreapp3.1\Task.App.csproj.AssemblyReference.cache

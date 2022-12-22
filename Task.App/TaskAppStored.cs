@@ -6,6 +6,8 @@ using System.Text;
 namespace Task.App
 {
     public enum status { ToDo, InProgress, Done }
+
+    // Defining field properties for the TaskAppStored class
     public class TaskAppStored : TaskApp
     {
         public string status { get; set; }

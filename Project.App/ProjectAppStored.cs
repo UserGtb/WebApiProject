@@ -6,6 +6,10 @@ using Project.App;
 namespace Project.App
 {
     public enum status { NotStarted, Active, Completed }
+
+    /// <summary>
+    /// Defining field properties for the ProjectAppStored class
+    /// </summary>
     public class ProjectAppStored : ProjectApp
     {
         public DateTime startdate { get; set; }

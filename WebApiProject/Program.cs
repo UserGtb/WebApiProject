@@ -16,11 +16,11 @@ namespace WebApiProject
         public static void Main(string[] args)
         {
             var hostbuilder = CreateHostBuilder(args).Build();
-
             using(var scope = hostbuilder.Services.CreateScope()) {
                 var serviceProvider = scope.ServiceProvider;
                 try {
                     var cntx = serviceProvider.GetRequiredService<ProjectAppDBcontext>();
+                    //Initializing database context of the ProjectAppDbcontext class
                     DBInitialize.Initialize(cntx);
                 }
                 catch (Exception e) {

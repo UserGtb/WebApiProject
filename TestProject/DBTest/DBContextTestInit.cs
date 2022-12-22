@@ -13,31 +13,25 @@ namespace TestProject
     {
         public static IConfiguration Configuration { get; }
 
+        //Static fields that will be use in testing project
         public static Guid ProjectCreateID = Guid.NewGuid();
         public static Guid ProjectUpdateID = Guid.NewGuid();
 
+        //Static fields that will be use in testing task
         public static Guid TaskCreateID = Guid.NewGuid();
         public static Guid TaskUpdateID = Guid.NewGuid();
+
+        //Creating a test context of the database
         public static ProjectAppDBcontext Create()
         {
             var options = new DbContextOptionsBuilder<ProjectAppDBcontext>().UseInMemoryDatabase("webapiprojectdb").Options;
             var context = new ProjectAppDBcontext(options);
             context.Database.EnsureCreated();
-            //context.ProjectsApp.AddRange(
-            //    new ProjectAppStored {
-            //        ID = ProjectUpdateID,
-            //        name = "newTestProj",
-            //        startdate = DateTime.Now,
-            //        completiondate = DateTime.Now.AddDays(5),
-            //        status = "NoStarted",
-            //        priority = 0,
-            //        task = null
-            //    }
-            //    );
             context.SaveChanges();
             return context;
         }
 
+        //Destroying a test context of the database
         public static void Destroy(ProjectAppDBcontext dBcontext)
         {
             dBcontext.Database.EnsureDeleted();

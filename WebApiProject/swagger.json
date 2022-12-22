@@ -11,6 +11,8 @@
         "tags": [
           "Project"
         ],
+        "summary": "View all projects",
+        "description": "All projects are displayed here",
         "operationId": "Project_GetAllProjects",
         "responses": {
           "200": {
@@ -31,6 +33,8 @@
         "tags": [
           "Project"
         ],
+        "summary": "View all tasks in the project",
+        "description": "Enter the project id to view tasks in the project",
         "operationId": "Project_GetAllTask",
         "parameters": [
           {
@@ -62,6 +66,8 @@
         "tags": [
           "Project"
         ],
+        "summary": "Create project with various fields",
+        "description": "Enter value these parameters to create a new project",
         "operationId": "Project_CreateProj",
         "parameters": [
           {
@@ -122,6 +128,8 @@
         "tags": [
           "Project"
         ],
+        "summary": "Edit project fields",
+        "description": "Enter value these parameters to update the project",
         "operationId": "Project_UpdateProj",
         "parameters": [
           {
@@ -191,6 +199,8 @@
         "tags": [
           "Project"
         ],
+        "summary": "Delete project from database and its tasks",
+        "description": "Enter the project id to delete the project",
         "operationId": "Project_DeleteProj",
         "parameters": [
           {
@@ -223,6 +233,8 @@
         "tags": [
           "Task"
         ],
+        "summary": "View all tasks",
+        "description": "All tasks are displayed here",
         "operationId": "Task_GetAllTasks",
         "responses": {
           "200": {
@@ -243,6 +255,8 @@
         "tags": [
           "Task"
         ],
+        "summary": "Create task with various fields",
+        "description": "Enter value these parameters to create a new task",
         "operationId": "Task_CreateTask",
         "parameters": [
           {
@@ -311,6 +325,8 @@
         "tags": [
           "Task"
         ],
+        "summary": "Edit task fields",
+        "description": "Enter value these parameters to update the task",
         "operationId": "Task_UpdateTask",
         "parameters": [
           {
@@ -379,6 +395,8 @@
         "tags": [
           "Task"
         ],
+        "summary": "Delete task from project",
+        "description": "Enter the task id to delete the task from project",
         "operationId": "Task_DeleteTask",
         "parameters": [
           {
@@ -398,29 +416,6 @@
               "application/json": {
                 "schema": {
                   "$ref": "#/components/schemas/TaskAppStored"
-                }
-              }
-            }
-          }
-        }
-      }
-    },
-    "/WeatherForecast": {
-      "get": {
-        "tags": [
-          "WeatherForecast"
-        ],
-        "operationId": "WeatherForecast_Get",
-        "responses": {
-          "200": {
-            "description": "",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/WeatherForecast"
-                  }
                 }
               }
             }
@@ -519,28 +514,6 @@
             "nullable": true
           },
           "description": {
-            "type": "string",
-            "nullable": true
-          }
-        }
-      },
-      "WeatherForecast": {
-        "type": "object",
-        "additionalProperties": false,
-        "properties": {
-          "date": {
-            "type": "string",
-            "format": "date-time"
-          },
-          "temperatureC": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "temperatureF": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "summary": {
             "type": "string",
             "nullable": true
           }

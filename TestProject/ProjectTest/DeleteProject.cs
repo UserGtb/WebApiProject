@@ -11,7 +11,8 @@ namespace TestProject.ProjectTest
 {
     public class DeleteProject : TestContext
     {
-       
+
+        //Checking the command for delete project in the test database context
         [Fact]
         public async ValueTask DeleteProjectTest()
         {

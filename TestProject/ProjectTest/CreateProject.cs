@@ -12,7 +12,7 @@ namespace TestProject.Project
 {
     public class CreateProject : TestContext
     {
-        //public static ProjectAppDBcontext _dbcontext = DBContextTestInit.Create();
+        //Checking the command for create project in the test database context
         [Fact]
         public async ValueTask CreateProjectTest()
         {
@@ -27,7 +27,6 @@ namespace TestProject.Project
             _dbcontext.ProjectsApp.Add(testproj);
             await _dbcontext.SaveChangesAsync();
             Assert.NotNull(_dbcontext.ProjectsApp.SingleOrDefaultAsync(proj=> proj.ID == DBContextTestInit.ProjectCreateID));
-            //_dbcontext.Database.CloseConnection();
         }
 
     }

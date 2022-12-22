@@ -9,6 +9,7 @@ namespace TestProject.TaskTest
 {
     public class DeleteTask : TestContext
     {
+        //Checking the command for delete task in the test project
         [Fact]
         public async ValueTask DeleteTaskTest()
         {

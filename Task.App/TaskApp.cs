@@ -4,7 +4,8 @@ using System.Text;
 
 namespace Task.App
 {
-
+    
+    // Defining field properties for the TaskApp class
     public class TaskApp
     {
         public Guid ID { get; set; }

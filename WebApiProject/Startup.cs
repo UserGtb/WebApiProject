@@ -28,7 +28,10 @@ namespace WebApiProject
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
+            //Defining the command of the service to add ProjectAppDBcontext context options with sqlserver configration that was written in the appsettings.json file 
+            //Определение команды сервиса для добавления параметров контекста ProjectAppDBcontext с конфигурацией sql сервера указанной в json файле appsettings.json 
             services.AddDbContext<ProjectAppDBcontext>(options => options.UseSqlServer(Configuration["ConnectionStrings:DefaultConnection"], b => b.MigrationsAssembly("WebApiProject")));
+            
             services.AddOpenApiDocument();
         }
 

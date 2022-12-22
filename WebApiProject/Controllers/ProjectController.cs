@@ -16,16 +16,16 @@ namespace WebApiProject.Controllers
     [ApiController]
     public class ProjectController : ControllerBase
     {
-
-        //private static List<ProjectApp> newproj = new List<ProjectApp>(new[] { new ProjectApp() { ID = Guid.NewGuid(), name="test", startdate=DateTime.Now.Date, completiondate = DateTime.Now.Date, task = new List<TaskApp>() } });
-
+        //Defining the field for database context
         private readonly ProjectAppDBcontext _context;
       
+        //Initializing the database context inside the constructor
         public ProjectController(ProjectAppDBcontext context)
         {
             _context = context;
         }
 
+        //Creating a method that returns the state of the project as a string 
         private string GetProjStatus(int stat)
         {
             string current_stat = stat == 0 ? Project.App.status.NotStarted.ToString() : stat == 1
@@ -37,6 +37,9 @@ namespace WebApiProject.Controllers
         /// <summary>
         /// View all projects
         /// </summary>
+        /// <remarks>
+        /// All projects are displayed here
+        /// </remarks>
         /// <returns></returns>
         [HttpGet]
         public async Task<ActionResult<ProjectAppStored>> GetAllProjects()
@@ -46,6 +49,9 @@ namespace WebApiProject.Controllers
         /// <summary>
         /// View all tasks in the project
         /// </summary>
+        /// <remarks>
+        /// Enter the project id to view tasks in the project
+        /// </remarks>
         /// <returns></returns>
         [HttpGet("ProjID")]
         public async Task<ActionResult<ProjectAppStored>> GetAllTask(Guid id)
@@ -57,12 +63,12 @@ namespace WebApiProject.Controllers
             return Ok(taskapplist);
         }
 
-        //[HttpGet]
-        //public async Task<IEnumerable<ProjectApp>> GetTest() => newproj;
-
         /// <summary>
         /// Create project with various fields
         /// </summary>
+        /// <remarks>
+        /// Enter value these parameters to create a new project
+        /// </remarks>
         /// <returns></returns>
         [HttpPost("name, completiondate, status, priority")]
         public async Task<IActionResult> CreateProj(string n, string endDate, int priority, int stat = 0)
@@ -78,14 +84,15 @@ namespace WebApiProject.Controllers
             };
             _context.ProjectsApp.Add(projectapp);
             await _context.SaveChangesAsync();
-            //newproj.Add(projectapp);
-            //await _context.ProjectsApp.ToListAsync();
             return Ok(projectapp);
         }
 
         /// <summary>
         /// Edit project fields
         /// </summary>
+        /// <remarks>
+        /// Enter value these parameters to update the project
+        /// </remarks>
         /// <returns></returns>
         [HttpPut("id, name, completiondate, status, priority")]
         public async Task<IActionResult> UpdateProj(Guid id, string n, string endDate, int priority, int stat = 0)
@@ -103,8 +110,11 @@ namespace WebApiProject.Controllers
         }
 
         /// <summary>
-        /// Delete project from Database and its tasks
+        /// Delete project from database and its tasks
         /// </summary>
+        /// <remarks>
+        /// Enter the project id to delete the project
+        /// </remarks>
         /// <returns></returns>
         [HttpDelete("id")]
         public async Task<IActionResult> DeleteProj(Guid id)

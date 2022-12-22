@@ -1,0 +1,13 @@
+D:\TaskProject\WebApiProject\Project.App\bin\Debug\netcoreapp3.1\Project.App.deps.json
+D:\TaskProject\WebApiProject\Project.App\bin\Debug\netcoreapp3.1\Project.App.dll
+D:\TaskProject\WebApiProject\Project.App\bin\Debug\netcoreapp3.1\Project.App.pdb
+D:\TaskProject\WebApiProject\Project.App\bin\Debug\netcoreapp3.1\Task.App.dll
+D:\TaskProject\WebApiProject\Project.App\bin\Debug\netcoreapp3.1\Task.App.pdb
+D:\TaskProject\WebApiProject\Project.App\obj\Debug\netcoreapp3.1\Project.App.csproj.AssemblyReference.cache
+D:\TaskProject\WebApiProject\Project.App\obj\Debug\netcoreapp3.1\Project.App.GeneratedMSBuildEditorConfig.editorconfig
+D:\TaskProject\WebApiProject\Project.App\obj\Debug\netcoreapp3.1\Project.App.AssemblyInfoInputs.cache
+D:\TaskProject\WebApiProject\Project.App\obj\Debug\netcoreapp3.1\Project.App.AssemblyInfo.cs
+D:\TaskProject\WebApiProject\Project.App\obj\Debug\netcoreapp3.1\Project.App.csproj.CoreCompileInputs.cache
+D:\TaskProject\WebApiProject\Project.App\obj\Debug\netcoreapp3.1\Project.App.csproj.CopyComplete
+D:\TaskProject\WebApiProject\Project.App\obj\Debug\netcoreapp3.1\Project.App.dll
+D:\TaskProject\WebApiProject\Project.App\obj\Debug\netcoreapp3.1\Project.App.pdb

@@ -7,6 +7,9 @@ using Project.App;
 
 namespace Data.Access.EFConfiguration
 {
+    /// <summary>
+    /// Implementing class with the interface IEntityTypeConfiguration for use in method OnModelCreating of the DbContext class
+    /// </summary>
     public class ProjectConfiguration : IEntityTypeConfiguration<ProjectAppStored>
     {
         public void Configure(EntityTypeBuilder<ProjectAppStored> builder)

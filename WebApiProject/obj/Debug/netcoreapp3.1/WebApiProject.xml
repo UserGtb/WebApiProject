@@ -1,0 +1,89 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>WebApiProject</name>
+    </assembly>
+    <members>
+        <member name="M:WebApiProject.Controllers.ProjectController.GetAllProjects">
+            <summary>
+            View all projects
+            </summary>
+            <remarks>
+            All projects are displayed here
+            </remarks>
+            <returns></returns>
+        </member>
+        <member name="M:WebApiProject.Controllers.ProjectController.GetAllTask(System.Guid)">
+            <summary>
+            View all tasks in the project
+            </summary>
+            <remarks>
+            Enter the project id to view tasks in the project
+            </remarks>
+            <returns></returns>
+        </member>
+        <member name="M:WebApiProject.Controllers.ProjectController.CreateProj(System.String,System.String,System.Int32,System.Int32)">
+            <summary>
+            Create project with various fields
+            </summary>
+            <remarks>
+            Enter value these parameters to create a new project
+            </remarks>
+            <returns></returns>
+        </member>
+        <member name="M:WebApiProject.Controllers.ProjectController.UpdateProj(System.Guid,System.String,System.String,System.Int32,System.Int32)">
+            <summary>
+            Edit project fields
+            </summary>
+            <remarks>
+            Enter value these parameters to update the project
+            </remarks>
+            <returns></returns>
+        </member>
+        <member name="M:WebApiProject.Controllers.ProjectController.DeleteProj(System.Guid)">
+            <summary>
+            Delete project from database and its tasks
+            </summary>
+            <remarks>
+            Enter the project id to delete the project
+            </remarks>
+            <returns></returns>
+        </member>
+        <member name="M:WebApiProject.Controllers.TaskController.GetAllTasks">
+            <summary>
+            View all tasks
+            </summary>
+            <remarks>
+            All tasks are displayed here
+            </remarks>
+            <returns></returns>
+        </member>
+        <member name="M:WebApiProject.Controllers.TaskController.CreateTask(System.Guid,System.String,System.Int32,System.String,System.Int32)">
+            <summary>
+            Create task with various fields
+            </summary>
+            <remarks>
+            Enter value these parameters to create a new task
+            </remarks>
+            <returns></returns>
+        </member>
+        <member name="M:WebApiProject.Controllers.TaskController.UpdateTask(System.Guid,System.String,System.Int32,System.String,System.Int32)">
+            <summary>
+            Edit task fields
+            </summary>
+            <remarks>
+            Enter value these parameters to update the task
+            </remarks>
+            <returns></returns>
+        </member>
+        <member name="M:WebApiProject.Controllers.TaskController.DeleteTask(System.Guid)">
+            <summary>
+            Delete task from project
+            </summary>
+            <remarks>
+            Enter the task id to delete the task from project
+            </remarks>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

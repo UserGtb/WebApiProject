@@ -5,6 +5,9 @@ using Task.App;
 
 namespace Project.App
 {
+    /// <summary>
+    /// Defining field properties for the ProjectApp class
+    /// </summary>
     public class ProjectApp
     {
         public Guid ID { get; set; }
